@@ -16,7 +16,19 @@
     color:#192a51;
     text-decoration: none;
   }
-  
+  body {background-image: url("images/background.png");}  
+
+  h1{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}    
+
+h3{
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
   .navbar{
     min-height: 70px;
     display: flex;
@@ -24,6 +36,7 @@
     align-items: center; 
     padding: 0 24px;
    }
+
    
 .nav-menu{
     display: flex;
@@ -43,11 +56,6 @@
 .nav-link:hover{
         color: #aaa1c8
        }
-h1{
-    text-align: center;
-    margin: 2rem 0;
-    font-size: 2.5rem;
-}    
 
 
 .hamburger{
@@ -108,37 +116,42 @@ main {
             padding-bottom: 3em;
             min-height:85%;
         }
-        aside,
-        article {
+aside, article {
           padding: 2em;
         }
         
-        aside {
+ aside {
           text-align: center;
         }
         
-        article {
+article {
+          text-align: center;
           width: 75%;
         }
         
         .columns {
           display: flex;
+          align-items: center;
         }
         
-        @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
           main {
             display: flex;
+            text-align: left;
           }
         
           aside {
             margin-left: 2%;
+                    }
+          h1{
+            text-align: center;
           }
         }
 .accordion{
     width: 90%;
     max-width: 1000px;
     margin: 2rem auto;
-}
+    }
 .accordion-item{
     background-color: #D5c6e0;
     color: #192a51;
@@ -176,7 +189,7 @@ main {
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid;
-    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+    border-image: linear-gradient(to right, transparent, #192a51, transparent) 1;
 }
  
 @media(max-width:767px) {
@@ -184,3 +197,31 @@ main {
       font-size: 14px;
     }
   }
+
+  #gallery img {
+    width: 25%;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 8px;
+    padding: 0 4px;
+    border-radius: 10px;
+  }
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+}
+
+@media (max-width:800px) {
+  #gallery img {
+    width: 50%;
+  }
+  }
+@media (max-width:600px) {
+  #gallery img {
+    width: 100%;
+  }
+}
